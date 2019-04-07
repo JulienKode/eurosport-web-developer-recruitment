@@ -1,0 +1,32 @@
+{
+  "name": "@app/core",
+  "version": "1.0.0",
+  "description": "Core package that contains business logic",
+  "author": "Julien Karst",
+  "devDependencies": {
+    "@types/jest": "^23.3.12",
+    "@types/react-redux": "^7.0.6",
+    "jest": "23.6.0",
+    "prettier": "^1.16.4",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.12.1",
+    "typescript": "^3.2.2",
+    "redux-saga-test-plan": "^4.0.0-beta.2",
+    "tslint-config-airbnb": "^5.11.1"
+  },
+  "dependencies": {
+    "idx": "^2.5.5",
+    "react-redux": "^6.0.1",
+    "recompose": "^0.30.0",
+    "redux": "^4.0.1",
+    "redux-saga": "^1.0.2",
+    "wretch": "^1.5.1"
+  },
+  "scripts": {
+    "clean:build": "rm -rf ./lib",
+    "build": "tsc",
+    "test": "jest",
+    "prettier": "prettier --write './src/**/*.ts?(x)'",
+    "lint": "tslint --fix './src/**/*.ts?(x)'"
+  }
+}
