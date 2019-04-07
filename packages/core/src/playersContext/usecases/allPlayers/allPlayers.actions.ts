@@ -1,9 +1,9 @@
-import { Player } from "core/src/playersContext/domain/entities/Player";
+import { Player } from '@app/core/src/playersContext/domain/entities/Player';
 
 export enum EPlayersActionType {
-  GET = "PLAYERS_GET",
-  GET_SUCCESS = "PLAYERS_GET_SUCCESS",
-  GET_FAILURE = "PLAYERS_GET_FAILURE"
+  GET = 'PLAYERS_GET',
+  GET_SUCCESS = 'PLAYERS_GET_SUCCESS',
+  GET_FAILURE = 'PLAYERS_GET_FAILURE',
 }
 
 export interface IPlayersAction {

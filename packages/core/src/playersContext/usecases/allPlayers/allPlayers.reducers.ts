@@ -2,14 +2,14 @@ import {
   EPlayersActionType,
   IGetPlayersAction,
   IGetPlayersActionFailure,
-  IGetPlayersActionSuccess
-} from "./allPlayers.actions";
-import { IAllPlayersState } from "core/src/playersContext/usecases/allPlayers/allPlayers.state";
+  IGetPlayersActionSuccess,
+} from './allPlayers.actions';
+import { IAllPlayersState } from '@app/core/src/playersContext/usecases/allPlayers/allPlayers.state';
 
 const defaultState: IAllPlayersState = {
   list: [],
   isLoading: false,
-  error: null
+  error: null,
 };
 
 export const allPlayersReducer = (
@@ -17,14 +17,14 @@ export const allPlayersReducer = (
   action:
     | IGetPlayersActionSuccess
     | IGetPlayersAction
-    | IGetPlayersActionFailure
+    | IGetPlayersActionFailure,
 ): IAllPlayersState => {
   switch (action.type) {
     case EPlayersActionType.GET_SUCCESS:
       return {
         list: currentState.list.concat(action.payload.list),
         isLoading: false,
-        error: null
+        error: null,
       };
     case EPlayersActionType.GET:
       return { ...currentState, isLoading: true };

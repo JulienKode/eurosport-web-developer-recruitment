@@ -1,7 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Card = styled.div`
-  background: #ffffff;
-  box-shadow: 0 2px 6px 0 rgba(47, 83, 151, 0.1);
-  border-radius: 3px;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px hsl(234, 20%, 80%);
 `;

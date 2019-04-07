@@ -1,7 +1,7 @@
-import { rootPlayers } from "core/src/playersContext/usecases/sagas";
-import { all, spawn } from "redux-saga/effects";
+import { rootPlayers } from '@app/core/src/playersContext/usecases/sagas';
+import { all, fork } from 'redux-saga/effects';
 
-export const allCoreSagas = [spawn(rootPlayers)];
+export const allCoreSagas = [fork(rootPlayers)];
 
 export function* rootSaga() {
   yield all(allCoreSagas);

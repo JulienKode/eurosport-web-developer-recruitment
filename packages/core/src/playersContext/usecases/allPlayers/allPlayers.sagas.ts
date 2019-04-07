@@ -1,8 +1,8 @@
-import { EPlayersActionType } from "./allPlayers.actions";
-import { createAction } from "core/src/common/utils/redux";
-import { call, put, getContext } from "redux-saga/effects";
-import { IGetPlayersAction } from "./allPlayers.actions";
-import { PLAYERS_CONTEXT_KEY } from "core/src/playersContext/usecases/context";
+import { EPlayersActionType } from './allPlayers.actions';
+import { createAction } from '@app/core/src/common/utils/redux';
+import { call, put, getContext } from 'redux-saga/effects';
+import { IGetPlayersAction } from './allPlayers.actions';
+import { PLAYERS_CONTEXT_KEY } from '@app/core/src/playersContext/usecases/context';
 
 export function* getAllPlayers(action: IGetPlayersAction) {
   try {
@@ -11,7 +11,7 @@ export function* getAllPlayers(action: IGetPlayersAction) {
     yield put(createAction(EPlayersActionType.GET_SUCCESS, { list }));
   } catch (error) {
     yield put(
-      createAction(EPlayersActionType.GET_FAILURE, { message: error.message })
+      createAction(EPlayersActionType.GET_FAILURE, { message: error.message }),
     );
   }
 }

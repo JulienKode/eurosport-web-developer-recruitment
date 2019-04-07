@@ -1,7 +1,7 @@
-import { Player } from "core/src/playersContext/domain/entities/Player";
-import { Gender } from "core/src/playersContext/domain/entities/Gender";
-import { Country } from "core/src/playersContext/domain/entities/Country";
-import { PlayerData } from "core/src/playersContext/domain/entities/PlayerData";
+import { Player } from '@app/core/src/playersContext/domain/entities/Player';
+import { Gender } from '@app/core/src/playersContext/domain/entities/Gender';
+import { Country } from '@app/core/src/playersContext/domain/entities/Country';
+import { PlayerData } from '@app/core/src/playersContext/domain/entities/PlayerData';
 
 export class PlayerBuilder {
   protected _firstName!: string;
@@ -55,7 +55,7 @@ export class PlayerBuilder {
       this._sex,
       this._country,
       this._picture,
-      this._data
+      this._data,
     );
   }
 }
